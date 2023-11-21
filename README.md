@@ -2,7 +2,7 @@
    <img src="/files/AP_UTN_Compacto_00.png">
    </p>
 
-# Desarrollador JAVA intermedio <img src="https://pic.sopili.net/pub/emoji/noto-emoji/png/128/emoji_u2615.png" width=20 height=20>
+# Desarrollador JAVA intermedio <img src="https://pic.sopili.net/pub/emoji/noto-emoji/png/128/emoji_u2615.png" width=40 height=40>
 
 El siguiente repositorio fue creado a los fines de organizar y disponer de manera más accesible, principalmente el trabajo integrador del curso y, además, se brinda acceso a las actividades desarrolladas.
 
