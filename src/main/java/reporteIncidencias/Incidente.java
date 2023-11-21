@@ -3,8 +3,12 @@ package reporteIncidencias;
 import java.util.Date;
 import java.util.List;
 
-public class Incidente extends Servicio{
+public class Incidente{
 	
+	private int id;
+	private String nombre;
+	private String descripcion;
+	private List<Tipo> tipos;
 	private String estado;
 	private Date fechaIngreso;
 	private Date fechaPosibleResolucion;
@@ -12,9 +16,36 @@ public class Incidente extends Servicio{
 	private String consideracionesFinales;
 	private int horasEstimadas;
 	private List<Integer> relacionados;
+	private Especialidad especialidad;
+	private Tecnicx tecnicx;
 	
 	void notificarTecnicx() {}
-
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getNombre() {
+		return nombre;
+	}
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getDescripcion() {
+		return descripcion;
+	}
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
+	}
+	public List<Tipo> getTipo() {
+		return tipos;
+	}
+	public void setTipo(Tipo tipo) {
+		this.tipos.add(tipo);
+	}
+	
 	public String getEstado() {
 		return estado;
 	}
@@ -73,6 +104,22 @@ public class Incidente extends Servicio{
 	
 	public void addRelacionado(int relacionado) {
 		this.relacionados.add(relacionado);
+	}
+
+	public Especialidad getEspecialidad() {
+		return especialidad;
+	}
+
+	public void setEspecialidad(Especialidad especialidad) {
+		this.especialidad = especialidad;
+	}
+
+	public Tecnicx getTecnicx() {
+		return tecnicx;
+	}
+
+	public void setTecnicx(Tecnicx tecnicx) {
+		this.tecnicx = tecnicx;
 	}
 
 }
