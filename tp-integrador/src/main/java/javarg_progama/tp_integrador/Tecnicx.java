@@ -1,18 +1,41 @@
 package javarg_progama.tp_integrador;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 
 public class Tecnicx extends Persona{
 	
+	@Column(name="medio_notificacion")
 	private String medioNotificacion;
+	
+	@Column(name="disponible")
 	private boolean disponible;
-	private Map <Integer, Tipo> tiempoDeResolucionPorTipo;
+	
+	@OneToMany
+	@JoinColumn(name="id_incidente", referencedColumnName = "id")
 	private List <Incidente> incidentesNuevos;
+	
+	@OneToMany
+	@JoinColumn(name="id_incidente", referencedColumnName = "id")
 	private List <Incidente> incidentesResueltos;
+	
+	@OneToMany
+	@JoinColumn(name="id_especialidad", referencedColumnName = "id")
 	private List <Especialidad> especialidades;
 	
+	public Tecnicx() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public Tecnicx(String nombre, String cuit, String razonSocial, String email) {
+		super(nombre, cuit, razonSocial, email);
+		// TODO Auto-generated constructor stub
+	}
+
 	/* Cambia estado del Incidente, lo cambia de lista, de incidentesNuevos lo pasa a 
 	 * incidentesResueltos y notifica al cliente.
 	 * @param idIncidente
@@ -37,17 +60,7 @@ public class Tecnicx extends Persona{
 	public void setDisponible(boolean disponible) {
 		this.disponible = disponible;
 	}
-
-	public Map<Integer, Tipo> getTiempoDeResolucionPorTipo() {
-		return tiempoDeResolucionPorTipo;
-	}
-
-	public void setTiempoDeResolucionPorTipo(int horas, Tipo tipo) {
-		Map<Integer, Tipo> map = new HashMap<Integer, Tipo>();
-		map.put(horas, tipo);
-		this.tiempoDeResolucionPorTipo = map;
-	}
-
+	
 	public List<Incidente> getIncidentesNuevos() {
 		return incidentesNuevos;
 	}
