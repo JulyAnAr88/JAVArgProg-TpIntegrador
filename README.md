@@ -8,7 +8,7 @@ El siguiente repositorio fue creado a los fines de organizar y disponer de maner
 
 ## Comenzando 🚀
 
-A continuación, detallo los links a las carpetas de cada actividad.
+A continuación, se encuantran detallados los links a las carpetas de cada actividad.
 
 ## Actividades 📂
 

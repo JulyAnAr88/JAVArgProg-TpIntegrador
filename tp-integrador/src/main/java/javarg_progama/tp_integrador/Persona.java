@@ -1,4 +1,4 @@
-package reporteIncidencias;
+package javarg_progama.tp_integrador;
 
 public class Persona {
 	private int id;
