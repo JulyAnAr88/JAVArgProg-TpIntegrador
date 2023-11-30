@@ -8,7 +8,7 @@
 		<exclude-unlisted-classes>false</exclude-unlisted-classes>
 		<properties>
 			<property name="jakarta.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/reporte_incidentes" />
+				value="jdbc:mysql://localhost:3306/reporte_incidentes?zeroDateTimeBehavior=convertToNull&amp;serverTimezone=UTC" />
 			<property name="jakarta.persistence.jdbc.user" value="root" />
 			<property name="jakarta.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
